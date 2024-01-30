@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sentiment analyzer</title>
+</head>
+<body>
+    <div class="container">
+        <form  method="post" enctype="multipart/form-data">
+            <h1>Review</h1>
+            <textarea class="TextArea" name="review" cols="40" rows="5">{{noclear}}</textarea>
+
+            <br>
+            <button type="submit" name = 'button' value="predict" style="
+            font-size: 130%;
+            padding-right: 123px;
+            padding-left: 123px;">Predict</button>
+
+            <br>
+            <button type="submit" name='button' value="reset" style="
+            font-size: 130%;
+            padding-left: 128px;
+            padding-right: 128px;">Reset</button>
+
+            <br>
+            <input type="radio" name="sentiment" value="1"><label style="font-size:120%;" ><b>Positive</b></label>
+
+            <textarea disabled name="predict_text" cols="14" rows="1">{{result}}</textarea>
+
+            <input type="radio" name="sentiment" value="0"><label style="font-size:120%;"><b>Negative</b></label>
+
+            <br>
+            <button type="submit" name="button" value="to_db" style="
+            font-size: 120%;
+            padding-left: 105px;
+            padding-right: 105px;">Send to DB</button>
+
+            <br>
+            <button type="submit" name="button" value="train" style="
+            font-size: 120%;
+            padding-left: 103px;
+            padding-right: 103px;">Train model</button>
+
+
+
+        </form>
+
+
+    </div>
+</body>
+</html>
